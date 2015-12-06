@@ -38,11 +38,14 @@ void osint_render(void){
 	SDL_Flip(screen);
 }
 
-static char *romfilename = "rom.dat";
 static char *cartfilename = NULL;
 
 static void init(){
 	FILE *f;
+	char* romfilename = getenv("VECTREX_ROM");
+	if (romfilename == NULL) {
+		romfilename = "rom.dat";
+	}
 	if(!(f = fopen(romfilename, "rb"))){
 		perror(romfilename);
 		exit(EXIT_FAILURE);

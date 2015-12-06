@@ -10,7 +10,7 @@
  *    the lower bits with the unused upper bits all set to zero.
  */
 
-#define einline __inline
+#define einline
 
 enum {
 	FLAG_E		= 0x80,
@@ -900,7 +900,7 @@ einline void inst_bra16 (unsigned test, unsigned op, unsigned *cycles)
 
 /* instruction: pshs/pshu */
 
-einline void inst_psh (unsigned op, unsigned *sp,
+void inst_psh (unsigned op, unsigned *sp,
 					   unsigned data, unsigned *cycles)
 {
 	if (op & 0x80) {
