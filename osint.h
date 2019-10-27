@@ -3,6 +3,6 @@
 
 /*extern char gbuffer[1024];*/
 
-void osint_render (void);
+void osint_render(void);
 
 #endif
