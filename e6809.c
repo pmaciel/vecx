@@ -646,6 +646,7 @@ static einline unsigned ea_indexed(unsigned *cycles)
 		*cycles += 5;
 		break;
 	default:
+		ea = 0;
 		printf("undefined post-byte\n");
 		break;
 	}
