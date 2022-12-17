@@ -235,7 +235,7 @@ void load_overlay(const char *filename)
     }
 }
 
-int main(int argc, char *argv[])
+int vecx_main(int argc, char *argv[])
 {
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0)
     {
