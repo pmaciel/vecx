@@ -506,7 +506,7 @@ e8910_callback(void *userdata, Uint8 *stream, int length)
 }
 
 static void
-e8910_build_mixer_table()
+e8910_build_mixer_table(void)
 {
 	int i;
 	double out;
@@ -526,7 +526,7 @@ e8910_build_mixer_table()
 
 extern unsigned snd_regs[16];
 
-void e8910_init_sound()
+void e8910_init_sound(void)
 {
 	// SDL audio stuff
 	SDL_AudioSpec reqSpec;
@@ -563,7 +563,7 @@ void e8910_init_sound()
 	SDL_PauseAudio(0);
 }
 
-void e8910_done_sound()
+void e8910_done_sound(void)
 {
 	SDL_CloseAudio();
 }
